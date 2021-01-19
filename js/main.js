@@ -1,20 +1,18 @@
-// ランダムな整数を作成（1-6）
+// ランダムな整数（1-6）
 let randomNumber = Math.floor(Math.random() * 6 + 1);
 
 
 // ボタンクリック時にくじを引く
 function drawKuji() {
-  // ランダムな整数を作成（1-6の例）
+  // ランダムな整数を作成（1-6）
   let randomNumber = Math.floor(Math.random() * 6 + 1);
 
-  // くじの結果画像を表示させる
-  document.getElementsByClassName("kuji")[0].setAttribute('src', `img/kuji${randomNumber}.jpg`);　// バックティック文字で囲む事に注意(` `)
+  // くじの結果画像を表示
+  document.getElementsByClassName("kuji")[0].setAttribute('src', `img/kuji${randomNumber}.jpg`);
 
-  // ボタンの文字を変更する
+  // ボタンの文字を変更
   document.querySelectorAll("button")[0].innerHTML = "ウイスキーおかわり！";
 }
-
-
 
 window.onload = function() {
   Particles.init({
